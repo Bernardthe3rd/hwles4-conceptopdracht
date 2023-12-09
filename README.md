@@ -39,11 +39,11 @@ Your website is an investment in the success of your business.
 We are here to help you succeed.
 Let's work together
 
-Hello
+Hello (bonus)
 
 Rekupe is a digital agency in Los Angeles. We use strategic UX, SEO optimization and beautiful visual designs to help your business grow. We see every project as a fresh opportunity, pushing ourselves to create new digital experiences. Have a question? Click here to contact us!
 
-Work
+Work (bonus)
 
 Rolling Stone
 
@@ -57,7 +57,7 @@ Worth
 
 A global media platform connecting a community that embraces worth beyond wealth.
 
-Services
+Services (bonus)
 
 Web Design Good web design is how companies stand out from their competitors. High quality web design leads to increased user conversion and engagement. Through a proven web design process, we help clients launch websites and products that improve on their bottom line.
 

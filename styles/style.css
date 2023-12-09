@@ -37,21 +37,92 @@ etc.
 /* ------------------------------- 2. Typography ----------------------------------- */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Merriweather', serif;
+    color: var(--big-floating-words);
 }
 
 p {
     font-family: 'Roboto', sans-serif;
+    color: var(--main-p-color);
 }
+
+a {
+    text-decoration: none;
+    color: var(--big-floating-words);
+}
+
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
 /* --------------- 3.1 Reusables ----------------------- */
+.outer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button {
+    color: var(--big-floating-words);
+    border: none;
+    border-radius: 20px;
+    box-shadow: 5px 10px 100px grey;
+    background-color: var(--button-color);
+    padding: 15px 30px;
+    margin: 20px;
+    text-transform: uppercase;
+}
+
+.projects {
+
+}
+
+.services {
+
+}
 
 /* --------------- 3.2 Other --------------------------- */
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
 
 /* --------------- 4.1 Header ------------------------- */
+header {
+    background: var(--header-bg-radient);
+}
+
+.inner-container_nav {
+    flex-basis: 5vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.inner-container_nav ul {
+    flex-basis: 400px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    color: var(--big-floating-words);
+}
+
+.inner-container_header-content {
+    flex-basis: 30vh;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.inner-container_img {
+    flex-basis: 5vh;
+    text-align: center;
+    width: 100%;
+}
 
 /* --------------- 4.2 Introduction ------------------- */
 
