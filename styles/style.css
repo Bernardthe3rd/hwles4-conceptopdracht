@@ -1,6 +1,6 @@
 /*////////////////////////
 Table of Contents
-1. Global Styles
+1. Global Styles & variables
 2. Typography
 3. Layout
 3.1 Reusables
@@ -12,9 +12,36 @@ etc.
 5. Media Queries
 ////////////////////////*/
 
-/* ------------------------------- 1. Global Styles -------------------------------- */
+
+/* ------------------------------- 1. Global Styles & variables ------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --purple: #5722CD;
+    --blue: #4845E4;
+    --button-color: #ED4385;
+    --main-p-color: #0C0C0C;
+    --big-floating-words: #F2F0FF;
+    --main-bg-color-projects: #F3F6F9;
+    --grey: #7A7A7A;
+    --header-bg-radient: linear-gradient(90deg, rgba(72,69,228,1) 50%, rgba(87,34,205,1) 90%);
+}
 
 /* ------------------------------- 2. Typography ----------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
