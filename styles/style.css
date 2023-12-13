@@ -34,6 +34,7 @@ etc.
     --header-bg-radient: linear-gradient(90deg, rgba(72,69,228,1) 50%, rgba(87,34,205,1) 90%);
 }
 
+
 /* ------------------------------- 2. Typography ----------------------------------- */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Merriweather', serif;
@@ -47,6 +48,7 @@ p {
 
 a {
     text-decoration: none;
+    font-family: 'Roboto', sans-serif;
     color: var(--big-floating-words);
 }
 
@@ -54,12 +56,6 @@ a {
 /* ------------------------------- 3. Layout --------------------------------------- */
 
 /* --------------- 3.1 Reusables ----------------------- */
-.outer-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .button {
     color: var(--big-floating-words);
     border: none;
@@ -71,9 +67,14 @@ a {
     text-transform: uppercase;
 }
 
-.projects {
-
+.inner-container_projects {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid darkblue;
+    flex-basis: 50vh;
 }
+
+
 
 .services {
 
@@ -86,6 +87,16 @@ a {
 /* --------------- 4.1 Header ------------------------- */
 header {
     background: var(--header-bg-radient);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.outer-container {
+    flex-basis: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .inner-container_nav {
@@ -124,6 +135,59 @@ header {
     width: 100%;
 }
 
-/* --------------- 4.2 Introduction ------------------- */
+/* --------------- 4.2 Main ------------------- */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 5px solid purple;
+}
+
+
+/* --------------- 4.2.1 introduction ------------------- */
+.outer-container_section_intro {
+    flex-basis: 40vh;
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-container_div_intro {
+    flex-basis: 40vh;
+    width: 750px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.inner-container_div_intro > h2 {
+    color: var(--purple);
+    margin: 10px 0;
+    padding: 5px;
+}
+
+.inner-container_div_intro > p {
+    padding-top: 100px;
+}
+
+.inner-container_div_intro > p > a {
+    color: var(--purple);
+}
+
+/* --------------- 4.2.2 Projects ------------------- */
+.outer-container_section_projects {
+    flex-basis: 40vh;
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    border: 5px dashed yellow;
+}
+
+
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
