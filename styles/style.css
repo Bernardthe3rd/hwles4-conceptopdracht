@@ -34,6 +34,10 @@ etc.
     --header-bg-radient: linear-gradient(90deg, rgba(72,69,228,1) 50%, rgba(87,34,205,1) 90%);
 }
 
+body {
+    background-color: var(--main-bg-color-projects);
+}
+
 
 /* ------------------------------- 2. Typography ----------------------------------- */
 h1, h2, h3, h4, h5, h6 {
@@ -67,15 +71,6 @@ a {
     text-transform: uppercase;
 }
 
-.inner-container_projects {
-    display: flex;
-    flex-direction: row;
-    border: 2px solid darkblue;
-    flex-basis: 50vh;
-}
-
-
-
 .services {
 
 }
@@ -86,13 +81,14 @@ a {
 
 /* --------------- 4.1 Header ------------------------- */
 header {
-    background: var(--header-bg-radient);
+
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
 .outer-container {
+    background: var(--header-bg-radient);
     flex-basis: 1200px;
     display: flex;
     flex-direction: column;
@@ -153,6 +149,8 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: white;
+
 }
 
 .inner-container_div_intro {
@@ -185,8 +183,60 @@ main {
     width: 1200px;
     display: flex;
     flex-direction: column;
+    flex-grow: 0;
+    flex-shrink: 1;
     border: 5px dashed yellow;
 }
+
+.inner-container_projects {
+    flex-basis: 50vh;
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid darkblue;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.inner-container_div_projects {
+    flex-basis: 300px;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 2px dotted orange;
+}
+
+.inner-container_div_projects > h2 {
+    color: var(--main-p-color);
+}
+
+.inner-container_div_projects > a {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: var(--purple);
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.image-wrapper-squiggle {
+    flex-basis: 50px;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.image-wrapper-projects {
+    flex-basis: 800px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+/* --------------- 4.2.3 Services ------------------- */
 
 
 
