@@ -350,6 +350,28 @@ form > textarea {
 }
 
 /* --------------- 4.3 Footer ------------------- */
+.outer-container_footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-container_div_footer {
+    flex-basis: 1200px;
+    height: 5vh;
+    flex-grow: 0;
+    flex-shrink: 1;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-container_div_footer > p {
+    color: var(--big-floating-words);
+}
 
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
