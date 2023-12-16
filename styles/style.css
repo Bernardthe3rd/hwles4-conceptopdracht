@@ -1,6 +1,6 @@
 /*////////////////////////
 Table of Contents
-1. Global Styles
+1. Global Styles & variables
 2. Typography
 3. Layout
 3.1 Reusables
@@ -12,20 +12,386 @@ etc.
 5. Media Queries
 ////////////////////////*/
 
-/* ------------------------------- 1. Global Styles -------------------------------- */
+
+/* ------------------------------- 1. Global Styles & variables ------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --purple: #5722CD;
+    --blue: #4845E4;
+    --button-color: #ED4385;
+    --main-p-color: #0C0C0C;
+    --big-floating-words: #F2F0FF;
+    --main-bg-color-projects: #F3F6F9;
+    --grey: #7A7A7A;
+    --header-bg-radient: linear-gradient(90deg, rgba(72,69,228,1) 50%, rgba(87,34,205,1) 90%);
+}
+
+body {
+    background-color: var(--main-bg-color-projects);
+}
+
 
 /* ------------------------------- 2. Typography ----------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+    color: var(--big-floating-words);
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    color: var(--main-p-color);
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: var(--big-floating-words);
+}
+
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
 /* --------------- 3.1 Reusables ----------------------- */
+.button {
+    color: var(--big-floating-words);
+    border: none;
+    border-radius: 20px;
+    box-shadow: 5px 10px 100px grey;
+    background-color: var(--button-color);
+    padding: 15px 30px;
+    margin: 20px;
+    text-transform: uppercase;
+}
 
 /* --------------- 3.2 Other --------------------------- */
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
 
 /* --------------- 4.1 Header ------------------------- */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 
-/* --------------- 4.2 Introduction ------------------- */
+.outer-container {
+    background: var(--header-bg-radient);
+    flex-basis: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inner-container_nav {
+    flex-basis: 5vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.inner-container_nav ul {
+    flex-basis: 400px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    color: var(--big-floating-words);
+}
+
+.inner-container_header-content {
+    flex-basis: 30vh;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.inner-container_img {
+    flex-basis: 5vh;
+    text-align: center;
+    width: 100%;
+}
+
+/* --------------- 4.2 Main ------------------- */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* --------------- 4.2.1 introduction ------------------- */
+.outer-container_section_intro {
+    flex-basis: auto;
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+
+}
+
+.inner-container_div_intro {
+    flex-basis: 40vh;
+    width: 750px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.inner-container_div_intro > h2 {
+    color: var(--purple);
+    margin: 10px 0;
+    padding: 5px;
+}
+
+.inner-container_div_intro > p {
+    padding-top: 100px;
+}
+
+.inner-container_div_intro > p > a {
+    color: var(--purple);
+}
+
+/* --------------- 4.2.2 Projects ------------------- */
+.outer-container_section_projects {
+    flex-basis: auto;
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    flex-shrink: 1;
+    margin: 50px 0;
+}
+
+.inner-container_projects {
+    flex-basis: 50vh;
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.inner-container_div_projects {
+    flex-basis: 300px;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.inner-container_div_projects > h2 {
+    color: var(--main-p-color);
+}
+
+.inner-container_div_projects > a {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: var(--purple);
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.image-wrapper-squiggle > img {
+    width: 100%;
+}
+
+.image-wrapper-squiggle {
+    max-width: 60px;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.image-wrapper-projects > img {
+    width: 100%;
+}
+
+.image-wrapper-projects {
+    max-width: 800px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+/* --------------- 4.2.3 Services ------------------- */
+
+.outer-container_section_services {
+    flex-basis: auto;
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: white;
+}
+
+.outer-container_div_services {
+    flex-basis: 1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 50px 0;
+}
+
+.inner-container_services {
+    flex-basis: 20vw;
+    height: 25vh;
+    border: 1px solid var(--purple);
+    box-shadow: 5px 10px 10px #8888;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: 20px;
+    margin: 10px;
+}
+
+.inner-container_services > h3 {
+    color: var(--purple);
+}
+
+.image-wrapper-icons > img {
+    width: 100%;
+}
+
+.image-wrapper-icons {
+    max-width: 75px;
+    flex-basis: 75px
+}
+
+/* --------------- 4.2.4 Form section ------------------- */
+.outer-container_section_form {
+    flex-basis: auto;
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: var(--header-bg-radient);
+}
+
+.inner-container_div_form {
+    flex-basis: 600px;
+    color: var(--big-floating-words);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px 0 25px 0;
+}
+
+.inner-container_div_form > h1 {
+    color: var(--big-floating-words);
+    font-size: 32px;
+    padding-bottom: 20px;
+}
+
+.inner-container_div_form > p {
+    color: var(--big-floating-words);
+}
+
+.inner-container_form {
+    border-radius: 10px 10px 10px 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
+}
+
+form > input {
+    padding: 10px 10px;
+    border-radius: 2px;
+    border: none;
+    margin-bottom: 30px;
+}
+
+form > textarea {
+    padding: 10px 10px;
+    border-radius: 2px;
+    border: none;
+}
+
+
+.button_form {
+    color: var(--big-floating-words);
+    border: none;
+    border-radius: 20px;
+    box-shadow: 5px 10px 100px grey;
+    background-color: var(--button-color);
+    padding: 15px 25px;
+    margin: 20px;
+    text-transform: uppercase;
+}
+
+/* --------------- 4.3 Footer ------------------- */
+.outer-container_footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-container_div_footer {
+    flex-basis: 1200px;
+    height: 5vh;
+    flex-grow: 0;
+    flex-shrink: 1;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-container_div_footer > p {
+    color: var(--big-floating-words);
+}
+
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
+@media screen and (min-width: 0px) and (max-width: 576px) {
+    p {
+        font-size: 10px;
+    }
+    .outer-container_div_services {
+        flex-direction: column;
+        flex-basis: 570px;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    p {
+        font-size: 12px;
+    }
+    .outer-container_div_services {
+        flex-direction: column;
+        flex-basis: 577px;
+        flex-grow: 1;
+    }
+}
